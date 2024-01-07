@@ -16,6 +16,7 @@ local on_attach = function(_, bufnr)
 
 	nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
 	nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+	nmap('<leader>lf', vim.lsp.buf.format, '[L]SP [F]ormat')
 
 	nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 	nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
@@ -23,6 +24,7 @@ local on_attach = function(_, bufnr)
 	nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
 	nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
 	nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+
 
 	-- See `:help K` for why this keymap
 	nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
@@ -52,7 +54,7 @@ return {
 
 		-- Useful status updates for LSP
 		-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-		{ 'j-hui/fidget.nvim', opts = {} },
+		{ 'j-hui/fidget.nvim',       opts = {} },
 
 		-- Additional lua configuration, makes nvim stuff amazing!
 		'folke/neodev.nvim',
@@ -123,7 +125,6 @@ return {
 						{ name = 'path' },
 					},
 				}
-
 			end
 		},
 	},
@@ -140,7 +141,7 @@ return {
 			pyright = {},
 			rust_analyzer = {},
 			tsserver = {},
-			html = { filetypes = { 'html', 'twig', 'hbs'} },
+			html = { filetypes = { 'html', 'twig', 'hbs' } },
 
 			lua_ls = {
 				Lua = {
