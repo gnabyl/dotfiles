@@ -30,7 +30,7 @@ _G.toggle_line_numbers = function()
 		vim.o.relativenumber = true
 	end
 end
-vim.keymap.set('n', "<CR>", "<cmd>lua toggle_line_numbers()<CR>", { noremap = true, silent = true})
+vim.keymap.set('n', "<CR>", "<cmd>lua toggle_line_numbers()<CR>", { noremap = true, silent = true })
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
