@@ -10,6 +10,9 @@ vim.o.softtabstop = 0
 vim.o.expandtab = false
 vim.o.incsearch = true
 
+vim.o.textwidth = 80
+vim.o.colorcolumn = "+1"
+
 -- Clear search highlight
 vim.keymap.set('n', "<C-c>", ":nohls<CR>")
 
